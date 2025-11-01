@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find local events quickly — create, browse, and view event details." />
+    <meta name="theme-color" content="#06b6d4" />
+    <title>Mini Event Finder</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root{--bg:#f8fafc;--accent:#06b6d4;--text:#0f172a}
+      html,body,#root{height:100%;margin:0}
+      body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial, sans-serif; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; display:flex; align-items:center; justify-content:center}
+      #root{width:100%;max-width:980px;padding:24px;box-sizing:border-box}
+      .loading{text-align:center;font-size:1.05rem;color:#475569}
+      a.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+      a.skip-link:focus{left:8px;top:8px;width:auto;height:auto;background:#fff;padding:8px;border-radius:4px}
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="root" role="main" aria-live="polite">
+      <div class="loading">Loading Mini Event Finder…</div>
+    </div>
+    <noscript>
+      <div style="padding:1rem;background:#fee2e2;color:#7f1d1d;">JavaScript is required to run this app. Please enable JavaScript in your browser.</div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
